@@ -1,5 +1,5 @@
 // Guarda la "cáscara" de la app (esta página e íconos) para que abra rápido. Los datos siempre vienen de Apps Script.
-var CACHE = 'tareas-v1';
+var CACHE = 'tareas-v2';
 var ARCHIVOS = ['./', 'index.html', 'manifest.webmanifest', 'icono-192.png', 'icono-512.png', 'icono-maskable-512.png', 'favicon.png'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(ARCHIVOS); }).then(function () { return self.skipWaiting(); }));
